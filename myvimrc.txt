@@ -1,0 +1,55 @@
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                                BASE SETTING                                "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+syntax on
+set nowrap
+set number relativenumber
+set hlsearch
+set nu rnu
+set nobackup
+set noswapfile
+set expandtab           " enter spaces when tab is pressed
+set textwidth=120       " break lines when line length increases
+set tabstop=4           " use 4 spaces to represent tab
+set softtabstop=4
+set shiftwidth=4        " number of spaces to use for auto indent
+set autoindent          " copy indent from current line when starting a new line
+set backspace=indent,eol,start " make backspaces more powerfull
+set splitbelow
+set showcmd             " show (partial) command in status line
+set colorcolumn=80
+highlight ColorColumn ctermbg=0 guibg=lightgrey
+set showmatch           " show matching brackets.
+set termwinsize=10x0
+  
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                                PLUGINGS                                    "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+set nocompatible              " be iMproved, required
+filetype off                  " required
+set rtp+=~/.vim/bundle/Vundle.vim
+
+call vundle#begin()
+    Plugin 'iVundleVim/Vundle.vim'       " required
+    Plugin 'preservim/nerdtree'
+    Plugin 'tomasiser/vim-code-dark'
+    Plugin 'ervandew/supertab'
+    Plugin 'jiangmiao/auto-pairs'
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+colorscheme codedark "delek gruvbox
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                                STATUSLINE                                  "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+set laststatus=2
+set statusline=%f\ 
+set statusline+=%=\%y
+set statusline+=\ %{&fileencoding?&fileencoding:&encoding}
+
+map <C-n> :NERDTree
+let g:NERDTreeStatusline="😸"
+let NERDTreeIgnore = ['\.pyc$', '__pycache__']
