@@ -20,7 +20,6 @@ set showcmd             " show (partial) command in status line
 set colorcolumn=80
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 set showmatch           " show matching brackets.
-set termwinsize=10x0
   
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                PLUGINGS                                    "
